@@ -21,9 +21,9 @@ const Navbar = () => {
                  
                     <div className="flex items-center justify-end gap-3">
                         <Link className="inline-flex items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-150 hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                            href="/auth/login/">Login</Link>
+                            href="/sign-in">Login</Link>
                         <Link className="items-center justify-center rounded-xl bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-slate-600 sm:inline-flex"
-                            href="/auth/signup/">Sign Up</Link>
+                            href="/sign-up">Sign Up</Link>
 
                     </div>
                 </div>
