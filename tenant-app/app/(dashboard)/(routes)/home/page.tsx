@@ -2,7 +2,10 @@ import { UserButton } from "@clerk/nextjs";
 
 const ProtectedPage = () => {
     return(
-        <UserButton/>
+        <div className="fixed inset-y-96 inset-x-96">
+            <UserButton />
+        </div>
+        
     );
 }
 
