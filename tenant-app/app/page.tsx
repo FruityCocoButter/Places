@@ -1,8 +1,13 @@
-import { UserButton } from "@clerk/nextjs";
+import Navbar from '@/app/_components/Navbar'
+import React from 'react'
 
-export default function Home(){
-    return(
-        <UserButton afterSignOutUrl="/landing">
-        </UserButton>
-    );
+const page = () => {
+  return (
+    <div>
+        <Navbar />
+        
+    </div>
+  )
 }
+
+export default page
