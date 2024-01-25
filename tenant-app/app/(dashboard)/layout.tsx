@@ -1,15 +1,21 @@
 import { Sidebar } from "./_components/sidebar";
 
-const DashboardLayout = ({children}:
-    {children:React.ReactNode}) => 
-        {
-    return(
-        <div className="h-full">
-            <div className="hidden md:flex h-full w-96 fixed inset-y-0 z-50">
-                <Sidebar/>
+const DashboardLayout = ({ children }:
+    { children: React.ReactNode }) => {
+    return (
+        <div className="flex">
+            {/* Sidebar - shown on medium devices and larger */}
+            <div className="h-screen sticky top-0">
+                <Sidebar />
             </div>
-            {children}
+
+            {/* Main Content */}
+            <div>
+                {children}
+            </div>
         </div>
+
+
     );
 }
 
