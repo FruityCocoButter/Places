@@ -1,4 +1,4 @@
-const HomePage = () => {
+const AttractionPage = () => {
     return(
         <div>
             HelloWorld
@@ -6,4 +6,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default AttractionPage;
