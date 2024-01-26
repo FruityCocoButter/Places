@@ -1,4 +1,4 @@
-const HomePage = () => {
+const PropertiesPage = () => {
     return(
         <div>
             HelloWorld
@@ -6,4 +6,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default PropertiesPage;

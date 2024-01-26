@@ -3,9 +3,9 @@ import { Sidebar } from "./_components/sidebar";
 const DashboardLayout = ({ children }:
     { children: React.ReactNode }) => {
     return (
-        <div className="flex">
+        <div className="h-full flex flex-col"">
             {/* Sidebar - shown on medium devices and larger */}
-            <div className="h-screen sticky top-0">
+            <div className="hidden md:flex h-full w-96 fixed inset-y-0 z-50"">
                 <Sidebar />
             </div>
 
@@ -17,6 +17,6 @@ const DashboardLayout = ({ children }:
 
 
     );
-}
+};
 
 export default DashboardLayout;
