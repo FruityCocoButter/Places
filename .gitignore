@@ -1,3 +1,5 @@
 node_modules/
 .next/
 tenant-app/bun.lockb
+.env
+.env.local

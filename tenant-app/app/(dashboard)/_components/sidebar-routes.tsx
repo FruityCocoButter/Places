@@ -31,13 +31,14 @@ export const SidebarRoutes = () => {
     return(
         <div className="flex flex-col w-full">
             {routes.map((route) => (
-            <div className="pl-14">
-                <SidebarItem
-                key={route.href}
-                icon={route.icon}
-                label={route.label}
-                href={route.href}/>
-            </div>))}
+                <div key={route.href} className="pl-14"> {/* Add the key here */}
+                    <SidebarItem
+                        icon={route.icon}
+                        label={route.label}
+                        href={route.href}
+                    />
+                </div>
+            ))}
         </div>
     )
 }
