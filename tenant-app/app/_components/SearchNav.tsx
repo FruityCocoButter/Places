@@ -9,12 +9,12 @@ const SearchNav = () => {
             className="fixed inset-x-0 top-0 z-30 mx-auto w-full border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg">
             {/* className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg"> */}
             <div className="px-4 flex justify-between items-center">
-                <div className="flex items-center">
+                <div className="pl-48 flex items-center">
                     <Link aria-current="page" className="flex items-center" href="/">
                         <Image className="h-7 w-auto" src="/logo.svg" alt="" width={30} height={30} />
                         <p className="sr-only">Website Title</p>
                     </Link>
-                    <h2 className=' text-xl font-bold leading-7 text-gray-900 sm:block'>Tenant</h2>
+                    <h2 className='text-xl font-bold leading-7 text-gray-900 sm:block'>TENANT</h2>
                 </div>
                 <div className="flex items-center">
                     <SearchBar /> {/* Search ber added here */}
