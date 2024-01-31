@@ -1,8 +1,8 @@
 "use client"
 
 import { Carousel, Button, Card } from "flowbite-react";
-import { Roboto } from "next/font/google";
-import { Bath, Bed, Ruler } from "lucide-react";
+import { Roboto, Readex_Pro } from "next/font/google";
+import { Star } from "lucide-react";
 
 const robotoLight = Roboto({
     subsets: ['latin'],
@@ -18,11 +18,19 @@ const robotoBold = Roboto({
     weight: "700"
 });
 
+const readex_pro = Readex_Pro(
+    {
+        subsets: ['latin'],
+        display: 'swap',
+        variable: '--font-readex-pro'
+    }
+)
+
 interface CardProps{
     images: string[]
 }
 
-export default function PropertyCard({images}: CardProps){
+export default function AttractionCard({images}: CardProps){
     return(
         <div className="h-auto w-96 bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3">
             <div className="h-56 w-80 mx-8 mt-4">
@@ -30,45 +38,35 @@ export default function PropertyCard({images}: CardProps){
                     {images.map((image) => (<img src={image} alt="..." />))}
                 </Carousel>
             </div>
-            
             <div className="w-80 mx-6 mt-4 text-xl font-bold text-cyan-700">
                 <div className={robotoBold.className}>  
-                    12 Candycane Blvd
+                    Obs Cafe
                 </div>
             </div>
             <div className="w-80 mx-6 my-2 text-base font-light">
                 <div className={robotoLight.className}>
-                Magnificant ocean views overlooked by Purgatory Hill.
-                Offers home theatre seating 20 guests, indoor gym and a private massage studio.
-                Two industrial grade generators and 3 olympic sized swimming pools.
-                Secure garage with two parking bays available.
-                Highly sought after, get it now. 
+                    Family friendly serving American style barbecue cuisine. Limited seating available, make your reservation now. 
+                </div>
+            </div>
+            <div className="w-80 mx-6 mb-2 text-base font-light text-sky-900">
+                <div className={readex_pro.className}>
+                    123 Lollipop Lane
                 </div>
             </div>
             <div className="flex flex-row mx-6 mb-4 gap-x-2 text-sm items-center">
-                <Bed size={16} />
                 <span>
-                    5
+                    Open: 7am - 5pm
                 </span>
-                <Bath size={16}/>
-                <span>
-                    6
-                </span>
-                <Ruler size={16} />
-                <span className="w-auto">
-                    2500 m<span className="text-[0.5rem] position: relative top-1 align-super">2</span>
-                </span>
-                <span className="flex ml-24 text-base text-cyan-800">
+                <div className="flex ml-36 text-base text-cyan-800 gap-x-2">
                     <span className={robotoBold.className}>  
-                        6250
+                        4.5
                     </span>
-                    <span className="text-sm mt-1">
-                        /pm
-                    </span>
-                </span>
-                
+                    <div className="mt-1">
+                        <Star size={16} color="#155e75"/>
+                    </div>
+                </div>
             </div>
         </div>
-            
-    )
+    );
 }
+        
