@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageCircle, Share, Heart} from 'lucide-react';
 import LocationTag from "./location-tag";
 import PersonTag from './person-tag';
+import Link from 'next/link';
 
 export interface Author {
     name: string;
@@ -35,12 +36,12 @@ const PostCard: React.FC<PostCardProps> = ({
   comments,
 }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 max-w-xl mx-auto border-2 border-blue-100">
+    <div className="bg-white shadow-lg rounded-lg p-6 w-[42rem] mx-auto border-2 border-blue-100">
       <div className="border-b pb-4">
         {/**<div className="text-green-600 uppercase text-sm font-semibold tracking-wide">{category}</div>*/}
         <LocationTag locationName="Cape Town"/>
         <h2 className="text-2xl font-bold my-2">{title}</h2>
-        <div className="flex items-center text-sm text-gray-500">
+        <div className="flex items-start text-sm text-gray-500 mt-2">
           <PersonTag personName={author.name}/>
           <span className="mx-2">•</span>
           <p>{timeAgo}</p>
@@ -53,9 +54,10 @@ const PostCard: React.FC<PostCardProps> = ({
         <div className="flex items-center space-x-1 text-gray-500">
           <Heart className="h-6 w-6" />
           <span>{likes}</span>
-          <a href={comments.link} target="_blank" rel="noopener noreferrer">
+          {/**<a href={comments.link} target="_blank" rel="noopener noreferrer">*/}
+          <Link href={comments.link}>
             <MessageCircle className="h-6 w-6" />
-          </a>
+          </Link>
           <span>{comments.count}</span>
         </div>
         <button onClick={() => (console.log(12))}>
