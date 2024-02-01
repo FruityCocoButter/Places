@@ -4,6 +4,7 @@ import { Card } from "flowbite-react";
 import Image from "next/image"
 import { Signika_Negative, Rubik } from "next/font/google";
 import { ThumbsUp, MessageSquare } from "lucide-react";
+import LocationTag from "./location-tag";
 
 const signikaNegative = Signika_Negative({
     subsets: ['latin'],
@@ -28,12 +29,9 @@ const rubikDark = Rubik({
 
 export default function CommentCard(){
     return(
-        <div className="h-auto w-[60rem] bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3">
-            <div className="m-5 flex gap-x-3 text-xl">
-                <Image width={50} height={50} src="/cape-town.jpg" alt="image 1"/>
-                <span className={signikaNegative.className}>Cape Town</span>
-            </div>
-            <div className="mx-6 mb-4 flex flex-col gap-y-2">
+        <div className="h-auto w-[60rem] bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3 p-6">
+            <LocationTag locationName="Cape Town"/>
+            <div className=" flex flex-col gap-y-2">
                 <div className={rubikLight.className}>
                     <span>
                         <span>Replying to </span>
@@ -48,7 +46,7 @@ export default function CommentCard(){
                         various breakpoints works really well.</span>
                 </div>
             </div>
-            <div className="flex flex-row mx-6 mb-4 gap-x-2 text-sm font-bold items-center">
+            <div className="flex flex-row gap-x-2 text-sm font-bold items-center">
                 <ThumbsUp size={16}/>
                 <span>
                     5

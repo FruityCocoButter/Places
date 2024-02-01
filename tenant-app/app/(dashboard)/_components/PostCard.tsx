@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageCircle, Share, Heart } from 'lucide-react';
+import { MessageCircle, Share, Heart} from 'lucide-react';
+import LocationTag from "./location-tag";
 
 export interface Author {
     name: string;
@@ -35,7 +36,8 @@ const PostCard: React.FC<PostCardProps> = ({
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 max-w-xl mx-auto border-2 border-blue-100">
       <div className="border-b pb-4">
-        <div className="text-green-600 uppercase text-sm font-semibold tracking-wide">{category}</div>
+        {/**<div className="text-green-600 uppercase text-sm font-semibold tracking-wide">{category}</div>*/}
+        <LocationTag locationName="Cape Town"/>
         <h2 className="text-2xl font-bold my-2">{title}</h2>
         <div className="flex items-center text-sm text-gray-500">
           <a href={author.link} target="_blank" rel="noopener noreferrer">
