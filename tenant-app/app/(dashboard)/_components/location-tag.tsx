@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image";
 import Link from 'next/link';
 import { Signika_Negative} from "next/font/google";

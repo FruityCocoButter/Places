@@ -19,7 +19,7 @@ const page = () => {
         category='Travel'
         title='The Best Time to Visit Cape Town'
         author={{
-            name: 'John Doe',
+            name: 'FruityCocoButter',
             image: '/next.svg',
             link: 'https://google.com'
         }}

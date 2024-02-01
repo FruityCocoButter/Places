@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle, Share, Heart} from 'lucide-react';
 import LocationTag from "./location-tag";
+import PersonTag from './person-tag';
 
 export interface Author {
     name: string;
@@ -40,10 +41,7 @@ const PostCard: React.FC<PostCardProps> = ({
         <LocationTag locationName="Cape Town"/>
         <h2 className="text-2xl font-bold my-2">{title}</h2>
         <div className="flex items-center text-sm text-gray-500">
-          <a href={author.link} target="_blank" rel="noopener noreferrer">
-            <img className="h-8 w-8 rounded-full mr-2" src={author.image} alt="Author" />
-          </a>
-          <p>{author.name}</p>
+          <PersonTag personName={author.name}/>
           <span className="mx-2">•</span>
           <p>{timeAgo}</p>
         </div>
