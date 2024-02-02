@@ -1,11 +1,11 @@
-import AttractionBanner from "../../_components/attraction-banner";
-import PropertyBanner from "../../_components/property-banner";
-import CommentCard from "../../_components/comment-card";
-import LandlordComment from "../../_components/landlord-comment";
+import AttractionBanner from "../../../_components/attraction-banner";
+import PropertyBanner from "../../../_components/property-banner";
+import CommentCard from "../../../_components/comment-card";
+import LandlordComment from "../../../_components/landlord-comment";
 
 const EventsPage = () => {
   return(
-    <div className="fixed inset-x-96 inset-y-32">
+    <div className="fixed inset-x-96 inset-y-56">
       <CommentCard/>
       <AttractionBanner 
           imageSrc="/obs cafe 1.png" 

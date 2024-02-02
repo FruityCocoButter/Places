@@ -1,19 +1,12 @@
 "use client";
 
 import React from 'react'
-import LocationBanner from '../../../_components/LocationBanner'
-import PostCard from '../../../_components/PostCard'
+import LocationBanner from '../../../../_components/LocationBanner'
+import PostCard from '../../../../_components/PostCard'
 
 const page = () => {
   return (
-    <div className="fixed inset-x-1/4 inset-y-20">
-        <LocationBanner 
-        imageSrc="/next.svg"
-        locationName='Cape Town'
-        coordinates='33.9249° S, 18.4241° E'
-        population='4.004 million'
-        
-        />
+    <div className="fixed inset-x-1/4 inset-y-56">
 
         <PostCard
         category='Travel'
