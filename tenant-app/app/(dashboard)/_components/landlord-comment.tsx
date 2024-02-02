@@ -1,7 +1,5 @@
-
 import { Signika_Negative, Rubik } from "next/font/google";
-import { ThumbsUp, MessageSquare } from "lucide-react";
-import LocationTag from "./location-tag";
+import PersonTag from "./person-tag";
 
 const signikaNegative = Signika_Negative({
     subsets: ['latin'],
@@ -24,18 +22,16 @@ const rubikDark = Rubik({
     weight: "400"
 });
 
-export default function CommentCard(){
+export default function LandlordComment(){
     return(
         <div className="h-auto w-[60rem] bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3 p-6">
-            <LocationTag locationName="Cape Town"/>
-            <div className=" flex flex-col gap-y-2">
+            <div className=" flex flex-col gap-y-3">
                 <div className={rubikLight.className}>
-                    <span>
-                        <span>Replying to </span>
-                        <span className={rubikDark.className}>amyrobson </span>
-                        <span>in </span>
-                        <span className={rubikDark.className}><span className="text-sky-700">Loadshedding again...</span></span>
-                    </span><br/>
+                    <div className="flex items-start text-sm text-gray-500">
+                        <PersonTag personName="FruityCocoButter"/>
+                        <span className="mx-2">•</span>
+                        <p>Sandton</p>
+                    </div>
                     <span className="text-sm">1 month ago</span><br/>
                     <span>Impressive! Though it seems the drag feature could be improved. 
                         But overall it looks incredible. 
@@ -43,17 +39,6 @@ export default function CommentCard(){
                         various breakpoints works really well.</span>
                 </div>
             </div>
-            <div className="flex flex-row gap-x-2 text-sm font-bold items-center">
-                <ThumbsUp size={16}/>
-                <span>
-                    5
-                </span>
-                <MessageSquare size={16}/>
-                <span>
-                    6
-                </span>
-            </div>
         </div>
-          
-    );
+    )
 }
