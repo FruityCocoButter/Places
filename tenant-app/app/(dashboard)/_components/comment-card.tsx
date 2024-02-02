@@ -26,7 +26,7 @@ const rubikDark = Rubik({
 
 export default function CommentCard(){
     return(
-        <div className="h-auto w-[60rem] bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3 p-6">
+        <div className="h-auto w-[56rem] bg-white border shadow-lg rounded-xl border-blue-300 flex flex-col items-start m-3 p-6">
             <LocationTag locationName="Cape Town"/>
             <div className=" flex flex-col gap-y-2">
                 <div className={rubikLight.className}>

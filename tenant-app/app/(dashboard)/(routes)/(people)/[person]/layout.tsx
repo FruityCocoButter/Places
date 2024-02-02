@@ -1,7 +1,16 @@
-import OptionsBar from "@/app/(dashboard)/_components/options-bar";
+"use client"
+import OptionsBar from "@/app/(dashboard)/_components/options-bar-routes";
 import SearchNav from "../../../../_components/SearchNav";
-import LocationBanner from "../../../_components/LocationBanner";
 import { Sidebar } from "./../../../_components/sidebar";
+import { usePathname } from "next/navigation";
+
+function getUsername(){
+    const pathname = usePathname();
+    const usernameEnd = pathname.indexOf("/", 1);
+    
+    const username = pathname.substring(1, usernameEnd)
+    return username;
+}
 
 const SideTabPageLayout = ({children}: {children:React.ReactNode}) => {
     return(
@@ -16,7 +25,7 @@ const SideTabPageLayout = ({children}: {children:React.ReactNode}) => {
                 </div>
                 <div>
                     <div className="fixed inset-x-1/4 inset-y-20">
-                        <OptionsBar/>
+                        <OptionsBar username={getUsername()}/>
                     </div>
 
                     {/* Main Content */}

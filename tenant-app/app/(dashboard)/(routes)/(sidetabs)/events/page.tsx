@@ -6,7 +6,6 @@ import LandlordComment from "../../../_components/landlord-comment";
 const EventsPage = () => {
   return(
     <div className="fixed inset-x-96 inset-y-56">
-      <CommentCard/>
       <AttractionBanner 
           imageSrc="/obs cafe 1.png" 
           attractionName="Obs Cafe" 
