@@ -8,26 +8,24 @@ const signika = Signika({
     weight: "400"
   });
 
-const routes = [
-    {
-        label: "Posts",
-        href: "/"
-    }
-];
 
 interface OptionsBarRouteProps{
-    username: string
+    username: string,
+    label1: string,
+    href1: string,
+    label2: string,
+    href2: string
 }
 
-export default function OptionsBarRoutes({username}: OptionsBarRouteProps){
+export default function OptionsBarRoutes({username, label1, href1, label2, href2}: OptionsBarRouteProps){
     const routes = [
         {
-            label: "Posts",
-            href: "/"+username+"/posts"
+            label: label1,
+            href: href1
         },
         {
-            label: "Comments",
-            href: "/"+username+"/comments"
+            label: label2,
+            href: href2
         }
     ];
 
