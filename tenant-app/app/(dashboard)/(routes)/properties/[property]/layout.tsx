@@ -3,6 +3,7 @@ import OptionsBar from "@/app/(dashboard)/_components/options-bar-routes";
 import SearchNav from "../../../../_components/SearchNav";
 import { Sidebar } from "./../../../_components/sidebar";
 import { usePathname } from "next/navigation";
+import PropertyBanner from "@/app/(dashboard)/_components/property-banner";
 
 function getPropertyName(){
     const pathname = usePathname();
@@ -25,6 +26,12 @@ const PropertyPageLayout = ({children}: {children:React.ReactNode}) => {
                 </div>
                 <div>
                     <div className="fixed inset-x-1/4 inset-y-20">
+                        <PropertyBanner
+                            imageSrc="/mansion4.png"
+                            propertyAddress="12 Candycane Blvd"
+                            propertyDesc="Magnificant ocean views overlooked by Purgatory Hill. 
+                            Offers home theatre seating 20 guests, indoor gym and a private massage studio."
+                        />
                         <OptionsBar 
                             username={getPropertyName()}
                             label1="Amenities"

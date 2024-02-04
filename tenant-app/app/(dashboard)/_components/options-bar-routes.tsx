@@ -35,7 +35,7 @@ export default function OptionsBarRoutes({username, label1, href1, label2, href2
                 <div className="w-[48rem] flex flex-row text-xl m-4">
                     {routes.map((routes) => (<OptionsBarItem label={routes.label} href={routes.href}/>))}
                 </div>
-                <hr/>
+                <hr className="bg-slate-300 border-slate-300 h-[0.25]"/>
             </div>
         </div>
     )

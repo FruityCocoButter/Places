@@ -1,25 +1,67 @@
 import AttractionBanner from "../../../_components/attraction-banner";
 import PropertyBanner from "../../../_components/property-banner";
 import CommentCard from "../../../_components/comment-card";
-import LandlordComment from "../../../_components/landlord-comment";
+import LandlordComment from "../../../_components/review-comment";
+import { Card } from 'flowbite-react';
 
 const EventsPage = () => {
   return(
-    <div className="fixed inset-x-96 inset-y-56">
-      <AttractionBanner 
-          imageSrc="/obs cafe 1.png" 
-          attractionName="Obs Cafe" 
-          rating={4.5} 
-          attractionDesc="Italian Restaurant
-          Welcome to Obz Cafe, where the flavors meet the vibrant pulse of Cape Town! 
-          Our restaurant is situated on the bustling Lower Main Road of Observatory"
-      />
-      <PropertyBanner
-      imageSrc="/mansion4.png"
-      propertyAddress="12 Candycane Blvd"
-      propertyDesc="Magnificant ocean views overlooked by Purgatory Hill. 
-      Offers home theatre seating 20 guests, indoor gym and a private massage studio."/>
-      <LandlordComment/>
+    <div className="fixed inset-x-96 inset-y-56 m-4 flex flex-row">
+        <div className="flex flex-col w-[28rem] mx-2">
+            <Card className="w-full h-auto m-2"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc="/star night.png" horizontal>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Star Night Event
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 ">
+                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    Excellent char-grilled filet mignon escargot fusion basted with freshly squeeze seal juice.
+                </p>
+            </Card>
+            <Card className="w-full h-auto m-2"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc="/purple party.png" horizontal>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Purple Party
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                    Excellent char-grilled filet mignon escargot fusion basted with freshly squeeze seal juice.
+                </p>
+            </Card>
+        </div>
+        <div className="flex flex-col w-[28rem] mx-2">
+            <Card className="w-full h-auto m-2"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc="/event poster.png" horizontal>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    New Event Coming
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                    Excellent char-grilled filet mignon escargot fusion basted with freshly squeeze seal juice.
+                </p>
+            </Card>
+            <Card className="w-full h-auto m-2"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc="/night market.png" horizontal>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Night Market event
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 ">
+                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                </p>
+            </Card>
+            <Card className="w-full h-auto m-2"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc="/summer bright.png" horizontal>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Summer Bright Event
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                    Excellent char-grilled filet mignon escargot fusion basted with freshly squeeze seal juice.
+                </p>
+            </Card>
+        </div>
     </div>
   );
 }

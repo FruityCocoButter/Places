@@ -25,7 +25,7 @@ interface PropertyBannerProps{
 
 export default function PropertyBanner({imageSrc, propertyAddress, propertyDesc}: PropertyBannerProps){
     return(
-        <div className="bg-white shadow-md rounded-lg p-4 grid grid-cols-3 items-center gap-4 h-auto m-2">
+        <div className="bg-white rounded-lg p-4 grid grid-cols-3 items-center gap-4 h-auto m-2">
             <div className="col-span-1">
                 <Avatar img={imageSrc} alt="Location" size="xl" rounded />
             </div>

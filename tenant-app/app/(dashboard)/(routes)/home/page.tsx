@@ -3,7 +3,7 @@
 import AttractionBanner from "../../_components/attraction-banner";
 import PropertyBanner from "../../_components/property-banner";
 import CommentCard from "../../_components/comment-card";
-import LandlordComment from "../../_components/landlord-comment";
+import LandlordComment from "../../_components/review-comment";
 import PostCard from "../../_components/PostCard";
 
 const HomePage = () => {
