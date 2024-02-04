@@ -6,13 +6,13 @@ import { usePathname } from "next/navigation";
 
 function getUsername(){
     const pathname = usePathname();
-    const usernameEnd = pathname.indexOf("/", 1);
+    const usernameEnd = pathname.indexOf("/", 8);
     
-    const username = pathname.substring(1, usernameEnd)
+    const username = pathname.substring(8, usernameEnd)
     return username;
 }
 
-const SideTabPageLayout = ({children}: {children:React.ReactNode}) => {
+const PersonPageLayout = ({children}: {children:React.ReactNode}) => {
     return(
         <div className="flex">
             <div className="h-full z-50">
@@ -25,7 +25,13 @@ const SideTabPageLayout = ({children}: {children:React.ReactNode}) => {
                 </div>
                 <div>
                     <div className="fixed inset-x-1/4 inset-y-20">
-                        <OptionsBar username={getUsername()}/>
+                        <OptionsBar 
+                            username={getUsername()}
+                            label1="Posts"
+                            href1={"/people/"+getUsername()+"/posts"}
+                            label2="Comments"
+                            href2={"/people/"+getUsername()+"/comments"}
+                        />
                     </div>
 
                     {/* Main Content */}
@@ -39,4 +45,4 @@ const SideTabPageLayout = ({children}: {children:React.ReactNode}) => {
     );
 }
 
-export default SideTabPageLayout;
+export default PersonPageLayout;

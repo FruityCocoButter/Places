@@ -1,15 +1,8 @@
 "use client";
-import { usePathname, useRouter } from 'next/navigation';
 import PostCard from '@/app/(dashboard)/_components/PostCard';
  
 const PersonPosts = () => {
-    const pathname = usePathname();
-    const router = useRouter();
 
-    const isActive = pathname === "/fruitycocobutter/posts";
-
-
-    const username = pathname.substring(1);
 
     return(
         <div className="fixed inset-x-[36rem] inset-y-[9rem]">
