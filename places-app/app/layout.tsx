@@ -20,7 +20,7 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "TENANT",
+  title: "Places",
   description: "Social media app for residents",
   icons:{
     icon: "/logo.svg"

@@ -17,7 +17,7 @@ const Navbar = () => {
                             <Image className="h-7 w-auto" src="/logo.svg" alt="" width={30} height={30} />
                             <p className="sr-only">Website Title</p>
                         </Link>
-                        <h2 className=' text-xl font-bold leading-7 text-gray-900 sm:block'>TENANT</h2>
+                        <h2 className=' text-xl font-bold leading-7 text-gray-900 sm:block'>Places</h2>
                     </div>
                  
                     <div className="flex items-center justify-end gap-3">
