@@ -1,14 +1,11 @@
 "use client";
+import PostCard from '@/app/(dashboard)/_components/PostCard';
+ 
+const PersonPosts = () => {
 
-import AttractionBanner from "../../_components/attraction-banner";
-import PropertyBanner from "../../_components/property-banner";
-import CommentCard from "../../_components/comment-card";
-import LandlordComment from "../../_components/review-comment";
-import PostCard from "../../_components/PostCard";
 
-const HomePage = () => {
     return(
-        <div className="fixed inset-x-[36rem] inset-y-16">
+        <div className="fixed inset-x-[36rem] inset-y-[9rem]">
             <PostCard
             category="travel"
             title="Loadshedding again in the Tri-State Area, surprise surprise"
@@ -33,9 +30,8 @@ const HomePage = () => {
             Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
             likes={5}
             comments={{count:17, link:"/posts/1"}}/>
-
         </div>
     )
 }
 
-export default HomePage;
+export default PersonPosts;
