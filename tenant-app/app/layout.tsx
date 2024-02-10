@@ -35,7 +35,13 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${openSans.variable} ${robotoMono.variable} font-sans`}>
-        <body className={openSans.className}>{children}</body>
+        <head>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+        </head>
+        <body className={openSans.className}>
+          {children}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+        </body>
       </html>
     </ClerkProvider>
   );
